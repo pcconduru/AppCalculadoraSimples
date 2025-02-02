@@ -2,7 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.AppCalculadoraSimples" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+       <item name="colorPrimary">@color/azulEscuro</item>
+       <item name="colorPrimaryVariant">@color/azulClaro</item>
     </style>
 
     <style name="Theme.AppCalculadoraSimples" parent="Base.Theme.AppCalculadoraSimples" />

@@ -7,13 +7,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+        android:id="@+id/btnEquals"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="="
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/azulClaro"
+        android:text="+"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEquals"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnSubtract"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/azulClaro"
+        android:text="-"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnTimes"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/azulClaro"
+        android:text="x"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubtract"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnDivide"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/azulClaro"
+        android:text="/"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTimes"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/azulClaro"
+        android:text="Clear"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDivide"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

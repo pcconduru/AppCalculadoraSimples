@@ -29,27 +29,35 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        var total : Int? = null
+        var total : Int = 0
 
         binding.btnClear.setOnClickListener {
             operacaoAberta.clear()
-            ultimaOperacao = ""
+            ultimaOperacao = operacaoAberta.toString()
         }
         binding.btnEquals.setOnClickListener {
+
+            var calcUltima = ultimaOperacao.toInt()
+            var calcAtual = operacaoAberta.toString().toInt()
+
             when (operador){
-                "somar" -> total = 10 + operacaoAberta.toString().toInt()
-                "subtrair" -> total = ultimaOperacao.toInt() - operacaoAberta.toString().toInt()
-                "dividir" -> total = ultimaOperacao.toInt() * operacaoAberta.toString().toInt()
-                "multiplicar" -> total = ultimaOperacao.toInt() / operacaoAberta.toString().toInt()
+                "somar" -> total = calcUltima + calcAtual
+                "subtrair" -> total = calcUltima - calcAtual
+                "dividir" -> total = calcUltima / calcAtual
+                "multiplicar" -> total = calcUltima * calcAtual
             }
 
             binding.txtCalculo.setText(total.toString())
+
+            calcUltima = total
         }
     }
 
     fun operacaoClick(view: View){
         var pegarOperacaoId = view.context.resources.getResourceEntryName(view.id)
         ultimaOperacao = operacaoAberta.toString()
+        operacaoAberta.clear()
+
         when ( pegarOperacaoId ){
             "btnAdd" -> operador = "somar"
             "btnDivider" -> operador = "dividir"
